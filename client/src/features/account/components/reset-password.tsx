@@ -5,7 +5,7 @@ import { Homebg } from "@/features/home-page/components/homebg";
 import { EmailOtpType } from "@supabase/supabase-js"
 import Image from "next/image";
 import { redirect, useRouter, useSearchParams } from "next/navigation"
-import Logo from "../../../../public/Logo.webp"
+import Logo from "../../../../public/logo.png"
 import HotAirBalloon from "../../../../public/Hot Air Balloon.webp"
 import { DarkCard } from "@/components/dark-card";
 import { AuthButton } from "@/features/auth/components/auth-btn";

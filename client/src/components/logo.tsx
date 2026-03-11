@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils"
 import Image from "next/image"
-import LogoImg from '../../public/Logo.webp'
+import LogoImg from '../../public/logo.png'
 
 export function Logo({ className } : { className?: string }) {
   return (

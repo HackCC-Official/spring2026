@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 interface VenueInfo {
@@ -10,6 +11,8 @@ interface VenueInfo {
     addressLine1: string;
     addressLine2: string;
     mapQuery: string;
+    imageSrc: string;
+    imageAlt: string;
 }
 
 export default function VenueMap() {
@@ -19,19 +22,23 @@ export default function VenueMap() {
                 id: "hackecc",
                 name: "HackECC",
                 location: "East Dining Hall",
-                date: "5/3",
+                date: "May 3rd",
                 addressLine1: "El Camino College",
                 addressLine2: "Torrance, CA",
                 mapQuery: "East Dining Hall El Camino College Torrance CA",
+                imageSrc: "/EastDininghallECC.png",
+                imageAlt: "East Dining Hall at El Camino College",
             },
             {
                 id: "hacksmc",
                 name: "HackSMC",
                 location: "Bundy Campus",
-                date: "5/9 - 5/10",
+                date: "May 9th - May 10th",
                 addressLine1: "Santa Monica College",
                 addressLine2: "Bundy Campus, Santa Monica, CA",
                 mapQuery: "Santa Monica College Bundy Campus Santa Monica CA",
+                imageSrc: "/Bundy_Campus.png",
+                imageAlt: "Bundy Campus at Santa Monica College",
             },
         ];
     }
@@ -91,15 +98,19 @@ export default function VenueMap() {
                         ))}
                     </div>
 
-                    <div className="flex justify-center items-center mb-6 rounded-2xl border border-[#e4d5ff] bg-bgpurple/90 w-full h-44 sm:h-52">
-                        <p className="font-mont text-white/90 text-sm sm:text-base tracking-wide uppercase">
-                            Image Placeholder
-                        </p>
+                    <div className="relative mb-6 rounded-2xl border border-[#e4d5ff] w-full h-44 sm:h-52 overflow-hidden">
+                        <Image
+                            src={selectedVenue.imageSrc}
+                            alt={selectedVenue.imageAlt}
+                            fill
+                            className="object-cover"
+                            sizes="(min-width: 640px) 36rem, 100vw"
+                        />
                     </div>
 
                     <h2 className="mb-1 font-bagel text-hoverpurple text-4xl sm:text-5xl">{selectedVenue.name}</h2>
                     <p className="font-mont text-gray-700 text-2xl">{selectedVenue.location}</p>
-                    <p className="mb-5 font-mont text-gray-700 text-xl">{selectedVenue.date}</p>
+                    <p className="mb-5 font-bagel text-gray-700 text-3xl">{selectedVenue.date}</p>
                     <p className="font-mont text-gray-700 text-lg">{selectedVenue.addressLine1}</p>
                     <p className="mb-6 font-mont text-gray-700 text-lg">{selectedVenue.addressLine2}</p>
 

@@ -5,7 +5,7 @@ import { getBrowserClient } from '@/features/auth/lib/supabase-client';
 import { Homebg } from '@/features/home-page/components/homebg';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import Logo from "../../../../public/Logo.webp"
+import Logo from "../../../../public/logo.png"
 import HotAirBalloon from "../../../../public/Hot Air Balloon.webp"
 import Image from 'next/image';
 import { AlertCircle } from 'lucide-react';

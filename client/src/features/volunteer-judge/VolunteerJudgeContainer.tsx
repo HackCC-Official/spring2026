@@ -14,7 +14,9 @@ import { ApplyButton } from "@/components/navbar"
 
 export default function VolunteerJudgeContainer() {
     return (
-        <div className="-z-10 relative order-none bg-bgpurple -mt-[5px] outline-none w-screen overflow-x-clip" id="involvedTab" >
+        <div className="-z-10 relative order-none bg-bgpurple -mt-10 pt-10 outline-none w-screen overflow-x-clip" id="involvedTab" >
+            <div className="-top-14 z-10 absolute inset-x-0 h-20 sm:h-28 bg-gradient-to-b from-transparent via-bgpurple/55 to-bgpurple blur-xl pointer-events-none"></div>
+            <div className="-top-8 z-10 absolute inset-x-0 h-12 sm:h-16 bg-[#d66dff]/12 blur-2xl pointer-events-none"></div>
             <Image src={PinkClusterL} alt="clouds" className="top-0 left-0 z-30 absolute w-[500px] pointer-events-none" sizes="(min-width: 540px) 500px, calc(90.91vw + 27px)"></Image>
             <Image src={CloudCluster} alt="clouds" className="-bottom-[150px] z-30 absolute w-[300px] pointer-events-none" sizes="300px"></Image>
 

@@ -26,7 +26,7 @@ export default function VenueMap() {
                 addressLine1: "El Camino College",
                 addressLine2: "Torrance, CA",
                 mapQuery: "East Dining Hall El Camino College Torrance CA",
-                imageSrc: "/EastDininghallECC.png",
+                imageSrc: "https://www.elcamino.edu/civic-center/images/EDR03.jpg",
                 imageAlt: "East Dining Hall at El Camino College",
             },
             {
@@ -37,7 +37,7 @@ export default function VenueMap() {
                 addressLine1: "Santa Monica College",
                 addressLine2: "Bundy Campus, Santa Monica, CA",
                 mapQuery: "Santa Monica College Bundy Campus Santa Monica CA",
-                imageSrc: "/Bundy_Campus.png",
+                imageSrc: "https://www.smc.edu/images/hero-images/_campus-hero-images/bundy-06.jpg",
                 imageAlt: "Bundy Campus at Santa Monica College",
             },
         ];
@@ -102,6 +102,7 @@ export default function VenueMap() {
                         <Image
                             src={selectedVenue.imageSrc}
                             alt={selectedVenue.imageAlt}
+                            unoptimized
                             fill
                             className="object-cover"
                             sizes="(min-width: 640px) 36rem, 100vw"

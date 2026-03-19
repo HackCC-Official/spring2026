@@ -10,12 +10,23 @@ import { ApplyButton } from "@/components/navbar"
 
 // TODO-IF-ACTION: Remove padding and make apply button active
 //<Image className="" src={BackgroundDarkCloud} alt="Back CLoud"></Image>
+// If adding carousel again: className="relative bg-bgpurple w-full overflow-hidden"
 export default function Footer() {
     return (
-        <div className="relative bg-bgpurple w-full overflow-hidden">
-            
-            <Image sizes="(min-width: 1520px) 100vw, (min-width: 1040px) calc(29.57vw + 1057px), (min-width: 780px) 1281px, 907px" src={FooterBg} className='z-0 absolute w-screen max-w-full object-cover 2xl:object-fill pointer-events-none' alt="bg" fill />
-            <div className="flex justify-center mx-auto py-[200px] md:py-[300px]">
+        /* CHANGE: Set bg-bgpurple to match the bottom of the AttendeeContainer */
+        <div className="relative bg-bgpurple w-full overflow-hidden -mt-[2px]">
+            <Image 
+                sizes="(min-width: 1520px) 100vw, (min-width: 1040px) calc(29.57vw + 1057px), (min-width: 780px) 1281px, 907px" 
+                src={FooterBg} 
+                className='z-0 absolute w-screen max-w-full object-cover 2xl:object-fill pointer-events-none' 
+                alt="bg" 
+                fill 
+            />
+
+            {/* SMOOTH TRANSITION: Blends from bgpurple into the Footer background image */}
+            <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-bgpurple to-transparent z-[1] pointer-events-none" />
+
+            <div className="flex justify-center mx-auto py-[200px] md:py-[300px] relative z-10">
                 <div className="relative flex">
                 <Image sizes="(min-width: 1040px) 288px, (min-width: 780px) 208px, 177px" className="-top-[100px] md:-top-[125px] lg:-top-[125px] -left-32 md:-left-48 z-10 absolute w-48 md:w-52 lg:w-72 h-auto animate-bobbing ease-linear pointer-events-none" src={BalloonCat} alt="cat" />
                     <div className="z-50 flex flex-col items-center overflow-hidden" >

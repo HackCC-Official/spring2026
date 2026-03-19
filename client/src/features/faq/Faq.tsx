@@ -3,9 +3,7 @@ import Card from "./ui/Card"
 import { Title } from "@/components/title";
 
 import { faFile } from "@fortawesome/free-regular-svg-icons"
-import { faLaptopCode } from "@fortawesome/free-solid-svg-icons"
-import { faPeopleGroup } from "@fortawesome/free-solid-svg-icons" 
-import { faWallet } from "@fortawesome/free-solid-svg-icons"
+import { faLaptopCode, faPeopleGroup, faWallet, faTrophy } from "@fortawesome/free-solid-svg-icons"
 import texture from "../../../public/About Texture.webp"
 import cloud from "../../../public/Pink Cloud Cluster 6.webp"
 
@@ -20,7 +18,8 @@ import stars from "../../../public/Cross Stars.webp"
 const text1 = "Applications are now open for all California community college students! If you're looking to take advantage of an exciting opportunity, be sure to submit your application between October 13th and October 31st. This is the official application period, Don’t wait until the last minute—start and complete your application as soon as possible to avoid missing out!"
 const text2 = "A Hackathon is an event where developers, designers, and tons of other tech interested people can come together to build projects within a short timeframe (14 hours at HackCC), to discover new opportunities and win awesome prizes."
 const text3 = "Participants can form teams of up to 4 members. There will be a team formation event at the beginning of HackCC to help everyone find teammates. Please note: HackCC is an 18+ event, meaning all participants must be 18 years or older to attend."
-const text4 = "Attending HackCC is an incredible opportunity, and the best part is, it comes at absolutely no cost to you! It is completely free to both apply to and attend HackCC. This means you can focus on what really matters: gaining hands-on experience, collaborating with like-minded peers, and expanding your knowledge in a fun, innovative environment"
+const text4 = "Attending HackCC is completely free — no cost to apply, no cost to attend. Last year, 103 students from 18 community colleges competed for over $2,020 in prizes, all without spending a dime. Focus on what matters: building, learning, and collaborating."
+const text5 = "HackCC 2025 at MiraCosta College was our biggest year yet. 179 applications. 103 attendees from 18 community colleges across California. 29 teams competed across AI/ML, Social Good, Game Development, and Overall Innovation — with $2,020 in prizes awarded and every participant receiving a Boot.dev coding pass."
 
 
 
@@ -45,6 +44,7 @@ export default function Faq() {
                         <Card hasSpeaker={false} title="What is a hackathon?" subtext={text2} iconDef={faLaptopCode}></Card>
                         <Card hasSpeaker={false} title="Can I compete in a team?" subtext={text3} iconDef={faPeopleGroup}></Card>
                         <Card hasSpeaker={false} title="How much does it cost to attend?" subtext={text4} iconDef={faWallet}></Card>
+                        <Card hasSpeaker={false} title="How was last year's HackCC?" subtext={text5} iconDef={faTrophy}></Card>
                     </div>
                 </div>
             </div>

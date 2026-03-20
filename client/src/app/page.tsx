@@ -24,7 +24,7 @@ export default function HomePage() {
       <About></About>
       <Collage></Collage>
       <Faq></Faq>
-      <Carousel></Carousel>
+      {/*<Carousel></Carousel> */}
       <AttendeeContainer/>
       {/* <Slider></Slider> */}
       <Footer></Footer>

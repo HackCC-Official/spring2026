@@ -32,6 +32,7 @@ export default function Footer() {
                     <div className="z-50 flex flex-col items-center overflow-hidden" >
                         <h2 className={`text-white  text-[3rem] font-bagel  z-10 md:text-[4rem] lg:text-[5rem] xl:text-[6rem]`}>Apply</h2>
                         <h3 className={`text-white text-[0.8rem] font-mont z-10 text-base sm:text-lg md:text-2xl 2xl:text-3xl`}>Apply to register as a participant</h3>
+                        {/* Mirror the hero CTA here so the page still ends with one clear action after the added homepage sections. */}
                         <ApplyButton text="Apply now" size="lg" to="/apply"></ApplyButton>
                     </div>
                 </div>

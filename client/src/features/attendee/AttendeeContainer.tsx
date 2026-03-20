@@ -37,7 +37,8 @@ export default function AttendeeContainer() {
     const [pair, setPair] = useState(0)
     const [visible, setVisible] = useState(true)
 
-    // Auto-rotate: after 5.5 s, fade out → swap → fade in
+    // Rotate through testimonial pairs so the section stays focused without stacking four large cards at once.
+    // Auto-rotate: after 5.5 s, fade out -> swap -> fade in
     useEffect(() => {
         const timer = setTimeout(() => {
             setVisible(false)
@@ -69,6 +70,7 @@ export default function AttendeeContainer() {
                 <Title text="What past attendees have said" />
 
                 <div
+                    // Opacity handles the cross-fade between the active pair and the next one.
                     className="flex md:flex-row flex-col justify-center items-center text-left transition-opacity duration-300"
                     style={{ opacity: visible ? 1 : 0 }}
                 >
@@ -82,6 +84,7 @@ export default function AttendeeContainer() {
                     {[0, 1].map(i => (
                         <button
                             key={i}
+                            // Manual dot navigation uses the same fade timing as autoplay so both transitions feel consistent.
                             onClick={() => {
                                 if (i === pair) return
                                 setVisible(false)

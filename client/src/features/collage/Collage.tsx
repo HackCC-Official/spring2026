@@ -21,14 +21,14 @@ export default function Collage() {
     <section className="relative w-full overflow-hidden py-10 px-6"
       style={{ background: 'linear-gradient(to bottom, #251884 0%, #4C27A0 100%)' }}>
 
-      {/* Top fade blend */}
+      {/* Fade the top edge so the collage blends into the previous section instead of feeling like a hard cut. */}
       <div aria-hidden style={{
         position: 'absolute', top: 0, left: 0, right: 0, height: 80,
         background: 'linear-gradient(to bottom, #251884 0%, transparent 100%)',
         pointerEvents: 'none', zIndex: 5,
       }} />
 
-      {/* Grain overlay */}
+      {/* A light grain pass keeps the scrapbook area from looking too digitally flat. */}
       <div aria-hidden style={{
         position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0,
         backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E")`,
@@ -58,7 +58,7 @@ export default function Collage() {
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
       <div className="polaroid-grid" style={{ position: 'relative', width: '100%', minHeight: 1150 }}>
 
-        {/* Big bottom cloud */}
+        {/* This lower cloud fills the open base of the collage and softens the handoff into the sections below. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/Pink Cloud Cluster 1.webp" alt="" aria-hidden style={{
           position: 'absolute', bottom: -60, left: '50%',
@@ -155,6 +155,7 @@ export default function Collage() {
         @media (max-width: 768px) {
           .pn-corner-cloud { display: none !important; }
 
+          /* On mobile the absolute scrapbook layout turns into a wrapped stack so each photo stays readable and tappable. */
           .polaroid-grid {
             position: relative !important;
             display: flex !important;

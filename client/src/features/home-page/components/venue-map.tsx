@@ -17,6 +17,7 @@ interface VenueInfo {
 
 export default function VenueMap() {
     function getVenues(): VenueInfo[] {
+        // Keep venue copy in one place so the toggle buttons, card details, and map embed stay synchronized.
         return [
             {
                 id: "hackecc",
@@ -58,6 +59,7 @@ export default function VenueMap() {
     return (
         <section className="relative pt-20 pb-28 w-full h-auto overflow-visible">
             <div className="absolute inset-0">
+                {/* Swap the satellite background with the selected campus so the section reinforces the active venue card. */}
                 <iframe
                     title={`${selectedVenue.name} satellite map`}
                     src={getMapEmbedUrl(selectedVenue.mapQuery)}
@@ -102,6 +104,7 @@ export default function VenueMap() {
                         <Image
                             src={selectedVenue.imageSrc}
                             alt={selectedVenue.imageAlt}
+                            // These previews come from campus-hosted image URLs, so we render them without Next optimization.
                             unoptimized
                             fill
                             className="object-cover"

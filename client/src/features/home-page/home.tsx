@@ -38,7 +38,7 @@ export default function Home() {
           </p>
         </div>
         {/* <Interest></Interest> */}
-        <ApplyButton text="Apply to Attend" size="xl" disabled></ApplyButton>
+        {/* <ApplyButton text="Apply to Attend" size="xl" disabled></ApplyButton> */}
       </div>
     </FrontPagePrimaryLayout>
   );

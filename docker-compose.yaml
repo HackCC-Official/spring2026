@@ -20,7 +20,7 @@ services:
     ports:
       - 4000:3000
     networks:
-      - hackcc-network
+      - hacksmc-network
   nginx:
     image: "ghcr.io/hackcc-official/spring2025/nginx"
     depends_on:
@@ -40,7 +40,7 @@ services:
       - ./certbot/conf/:/etc/letsencrypt/:rw
       - /var/log/nginx:/var/log/nginx
     networks:
-      - hackcc-network
+      - hacksmc-network
   certbot:
     image: certbot/certbot:latest
     volumes:
@@ -50,5 +50,5 @@ services:
     env_file:
       - .env
 networks:
-  hackcc-network:
+  hacksmc-network:
     external: true

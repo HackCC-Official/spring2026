@@ -58,7 +58,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             docker system prune -a --volumes
-            docker network create hackcc-network
+            docker network create hacksmc-network
             cd spring2025
             echo "${{ secrets.PROD_ENV_FILE }}" > .env
             echo "${{ secrets.PROD_ENV_FILE }}" > .env.production

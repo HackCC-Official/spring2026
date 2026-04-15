@@ -1,13 +1,19 @@
 import Image from 'next/image'
-
+import image3 from '../../../public/2026-images/image3.png'
+import image4 from '../../../public/2026-images/image4.png'
+import image5 from '../../../public/2026-images/image5.png'
+import image6 from '../../../public/2026-images/image6.png'
+import image7 from '../../../public/2026-images/image7.png'
+import image8 from '../../../public/2026-images/image8.png'
+import image9 from '../../../public/2026-images/image9.png'
 const PHOTOS = [
-  { src: '/2026-images/image3.png', alt: 'Team Vibes',   rotate: -3,  top: '2%',  left: '13%',   tape: 'left',   fit: 'contain' },
-  { src: '/2026-images/image4.png', alt: 'Team Vibes',   rotate:  4,  top: '3%',  left: '59%',  tape: 'center', w: 520, h: 390 },
-  { src: '/2026-images/image5.png', alt: 'Team Vibes',   rotate: -4,  top: '41%', left: '7%',   tape: 'center' },
-  { src: '/2026-images/image6.png', alt: 'Hacking Away', rotate:  3,  top: '48%', left: '45%',  tape: 'left'   },
-  { src: '/2026-images/image7.png', alt: 'Winners',      rotate: -2,  top: '47%', left: '89%',  tape: 'center' },
-  { src: '/2026-images/image8.png', alt: 'Winners',      rotate:  2,  top: '53%', left: '-29%',   tape: 'right'  },
-  { src: '/2026-images/image9.png', alt: 'Winners',      rotate: -3,  top: '10%', left: '-30%',  tape: 'center' },
+  { src: image3, alt: 'Team Vibes',   rotate: -3, top: '2%',  left: '13%',  tape: 'left',   fit: 'contain' },
+  { src: image4, alt: 'Team Vibes',   rotate:  4, top: '3%',  left: '59%',  tape: 'center', w: 520, h: 390 },
+  { src: image5, alt: 'Team Vibes',   rotate: -4, top: '41%', left: '7%',   tape: 'center' },
+  { src: image6, alt: 'Hacking Away', rotate:  3, top: '48%', left: '45%',  tape: 'left'   },
+  { src: image7, alt: 'Winners',      rotate: -2, top: '47%', left: '89%',  tape: 'center' },
+  { src: image8, alt: 'Winners',      rotate:  2, top: '53%', left: '-29%', tape: 'right'  },
+  { src: image9, alt: 'Winners',      rotate: -3, top: '10%', left: '-30%', tape: 'center' },
 ]
 
 const TAPE_OFFSET: Record<string, string> = {

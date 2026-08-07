@@ -39,7 +39,9 @@ export default function Footer() {
             </div>
             <div className="bottom-6 left-0 z-30 absolute w-full px-4 sm:px-8 lg:px-20">
                 <div className="flex justify-between items-center w-full">
-                    <div className="flex items-center gap-3 sm:gap-4">
+                    {/* Negative margin cancels the per-icon mx in Socials so the row sits flush
+                        with this container's horizontal padding instead of double-indented. */}
+                    <div className="flex items-center gap-3 sm:gap-4 -ml-3 sm:-ml-4">
                         <Socials baseColor="text-white" hoverColor="hover:text-navyblue"/>
                     </div>
                     <div className="flex items-center gap-3 sm:gap-4">

@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import cloud from "../../../public/Violet Cloud Cluster 2.webp"
+import cloud from "../../../public/Violet Cloud Cluster 2 (1).webp"
 import cloud2 from "../../../public/Violet Cloud Cluster 1.webp"
 import AttendeeCard from "./ui/AttendeeCard"
 import { Title } from "@/components/title";
